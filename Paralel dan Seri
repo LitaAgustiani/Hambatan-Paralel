@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+void cetakInfo ()
+{
+	cout << "Menampilkan hasil Hambatan Rangkaian Paralel dan Seri" << endl << endl;
+	
+}
+
+double hasilHambatanParalel (double x, double y, double z)
+{
+	return 1/x + 1/y + 1/z;
+}
+
+double hasilHambatanSeri (double a, double b, double c)
+{
+	return a + b + c;
+}
+
+int main ()
+{
+	cetakInfo ();
+	double x, y, z, a, b, c;
+	cout << "*) tekan enter setelah memasukkan nilai angka!!"<< endl;
+	cout << "Masukkan angka untuk Hambatan Paralel (Tiga angka untuk R1, R2 dan R3) : " << endl;
+	cin >> x >> y >> z;
+	cout << "Masukkan angka untuk Hambatan Seri (Tiga angka untuk R1, R2 dan R3) : " << endl;
+	cin >> a >> b >> c;
+	cout << "Hasil Perhitungan Hambatan Rangkaian Paralel = " << hasilHambatanParalel (x, y, z) << endl << endl;
+	cout << "Hasil Perhitungan Hambatan Rangkaian Seri = " << hasilHambatanSeri (a, b, c);
+	return 0;
+	
+}
